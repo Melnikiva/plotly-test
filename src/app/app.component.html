@@ -3,7 +3,7 @@
     <td>
       <plotly-plot
         id="plot"
-        [data]="graph.data"
+        [data]="graph.data!"
         [layout]="graph.layout"
       ></plotly-plot>
     </td>
@@ -29,8 +29,7 @@
           [defaultValue]="50"
           [(ngModel)]="number_y"
         />
-        <br />
-        <br />
+        <p>Values from 2 to 100</p>
         <button (click)="refresh()">Refresh</button>
       </div>
     </td>

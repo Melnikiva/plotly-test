@@ -26,13 +26,16 @@ export class AppComponent {
   }
 
   getNewValues() {
-   return {
-      data: [
-          { z: getPointsArray(this.number_x, this.number_y), type: 'surface' },
-      ],
-      layout: {width: 600, height: 600, title: 'Test Surface Plot'},
-
+    if (this.number_x <= 100 && this.number_y <= 100 && this.number_x >= 2 && this.number_y >= 2) {
+      return {
+        data: [
+            { z: getPointsArray(this.number_x, this.number_y), type: 'surface' },
+        ],
+        layout: {width: 600, height: 600, title: 'Test Surface Plot'},
+  
+      }
     }
+    return {};
   }
 }
 
